@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 
 # total_score = 0;
 # avarage_score = 0
@@ -44,16 +45,39 @@ students = [
 # lowest_score = min(student['score'] for student in students)
 # print(f"Lowest score: {lowest_score}")
 
-# practicing with numpy
-print(np.__version__)
+# # practicing with numpy
+# print(np.__version__)
 
-np_array = np.array([student['score'] for student in students])
+# np_array = np.array([student['score'] for student in students])
 
-average_numpy = np.mean(np_array)
-print(f"Average of numpy array: {average_numpy}")
+# average_numpy = np.mean(np_array)
+# print(f"Average of numpy array: {average_numpy}")
 
-max_numpy = np.max(np_array)
-print(f"Max of numpy array: {max_numpy}")
+# max_numpy = np.max(np_array)
+# print(f"Max of numpy array: {max_numpy}")
 
-min_numpy = np.min(np_array)
-print(f"Min of numpy array: {min_numpy}")
+# min_numpy = np.min(np_array)
+# print(f"Min of numpy array: {min_numpy}")
+
+df = pd.DataFrame(students)
+# print(df)
+
+dfCsv = pd.read_csv('./orders.csv')
+# print(dfCsv)
+
+# df.head()        # First 5 rows
+# df.tail()        # Last 5 rows
+# df.info()        # Column types and non-null values
+# df.describe()    # Summary stats
+# df.columns      # Column names
+# df.index         # Row indices
+
+average_score = df["score"].mean()
+max_score = df["score"].max()
+min_score = df["score"].min()
+
+print("Average:", average_score)
+print("Maximum:", max_score)
+print("Minimum:", min_score)
+
+print(df["score"].describe())
