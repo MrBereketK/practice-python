@@ -3,6 +3,7 @@
 
 import numpy as np
 import pandas as pd
+import seaborn as sns
 import matplotlib.pyplot as plt
 
 # total_score = 0;
@@ -126,4 +127,32 @@ students = [
 # plt.title("Age Distribution")
 # plt.xlabel("Age")
 # plt.ylabel("Count")
+# plt.show()
+
+
+# S E A B O R N
+# Seaborn is a statistical visualization library built on top of Matplotlib. I mainly use it for exploratory data analysis, especially histograms to understand distributions and heatmaps to visualize correlations between features.
+
+# ages = [18, 19, 20, 20, 21, 22, 22, 23, 24, 20]
+
+# sns.histplot(ages)
+# plt.show()
+
+# data = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ]
+
+# sns.heatmap(data)
+# plt.show()
+
+# data = {
+#     "Age": [18, 19, 20, 21, 22],
+#     "StudyHours": [2, 3, 5, 6, 8],
+#     "Score": [50, 60, 75, 85, 95]
+# }
+
+# df = pd.DataFrame(data)
+# sns.heatmap(df.corr(), annot=True)
 # plt.show()
