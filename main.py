@@ -1,5 +1,9 @@
+
+# P Y T H O N
+
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # total_score = 0;
 # avarage_score = 0
@@ -45,7 +49,9 @@ students = [
 # lowest_score = min(student['score'] for student in students)
 # print(f"Lowest score: {lowest_score}")
 
-# # practicing with numpy
+# # n u m p y
+
+
 # print(np.__version__)
 
 # np_array = np.array([student['score'] for student in students])
@@ -59,25 +65,65 @@ students = [
 # min_numpy = np.min(np_array)
 # print(f"Min of numpy array: {min_numpy}")
 
-df = pd.DataFrame(students)
-# print(df)
 
-dfCsv = pd.read_csv('./orders.csv')
-# print(dfCsv)
+# P A N D A S
 
-# df.head()        # First 5 rows
-# df.tail()        # Last 5 rows
-# df.info()        # Column types and non-null values
-# df.describe()    # Summary stats
-# df.columns      # Column names
-# df.index         # Row indices
 
-average_score = df["score"].mean()
-max_score = df["score"].max()
-min_score = df["score"].min()
+# df = pd.DataFrame(students)
+# # print(df)
 
-print("Average:", average_score)
-print("Maximum:", max_score)
-print("Minimum:", min_score)
+# dfCsv = pd.read_csv('./orders.csv')
+# # print(dfCsv)
 
-print(df["score"].describe())
+# # df.head()        # First 5 rows
+# # df.tail()        # Last 5 rows
+# # df.info()        # Column types and non-null values
+# # df.describe()    # Summary stats
+# # df.columns      # Column names
+# # df.index         # Row indices
+
+# average_score = df["score"].mean()
+# max_score = df["score"].max()
+# min_score = df["score"].min()
+
+# print("Average:", average_score)
+# print("Maximum:", max_score)
+# print("Minimum:", min_score)
+
+# print(df["score"].describe())
+
+
+# M a t p l o t l i p
+
+# # plotting example with matplotlib
+
+# scores = [70, 80, 75, 90, 85]
+
+# plt.plot(scores)
+# plt.title("Student Scores")
+# plt.xlabel("Student Index")
+# plt.ylabel("Score")
+# plt.show()
+
+# # bars example with matplotlib
+# students = ["John", "Anna", "Mike"]
+# scores = [80, 90, 75]
+
+# plt.bar(students, scores)
+# plt.show()
+
+# students = ["A", "B", "C"]
+# scores = [78, 90, 85]
+
+# plt.bar(students, scores)
+# plt.title("Student Scores")
+# plt.show()
+
+# # histogram example with matplotlib
+# ages = [18, 19, 20, 20, 21, 22, 22, 22, 23, 24]
+
+# plt.hist(ages)
+# plt.title("Age Distribution")
+# plt.xlabel("Age")
+# plt.ylabel("Count")
+# plt.show()
